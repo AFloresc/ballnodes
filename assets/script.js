@@ -9,7 +9,7 @@ canvas.height = innerWidth
 
 // Multiple balls
 let balls = []
-for (let i =0; i < 5; i++){
+for (let i = 0; i < 5; i++){
     balls.push(new Ball(canvas.width / 2, canvas.height / 2))
 }
 
@@ -21,6 +21,7 @@ function anim (){
     //ball.move()
 
     //Multiple balls
+    ctx.clearRect(0, 0, canvas.height, canvas.width)
     balls.forEach(ball =>{
         ctx.clearRect(0, 0, canvas.height, canvas.width)
         ball.draw()
